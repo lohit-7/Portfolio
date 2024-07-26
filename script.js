@@ -202,6 +202,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
 
+    emailjs.init("UTWtNGZl50UqqTyqo"); // Replace with your actual User ID
+    
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+        
+        emailjs.sendForm("Lohit_7684", "template_07g6d5c", this)
+            .then(function(response) {
+                document.getElementById("notification").style.display = "block";
+                setTimeout(function() {
+                    document.getElementById("notification").style.display = "none";
+                }, 2000); // Show notification for 2 seconds
+            }, function(error) {
+                console.log("Error:", error);
+            });
+    });
+
     // Function to create stars dynamically
     function createStars() {
         const starCount = 250; // Number of stars
