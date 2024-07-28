@@ -589,13 +589,14 @@ nav ul li a:hover {
 
 .social-icons {
     position: relative;
-    width: 300px;
+    width: 100px;
     height: 300px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+
 }
 
 .social-icon {
@@ -609,6 +610,7 @@ nav ul li a:hover {
     align-items: center;
     text-decoration: none;
     justify-content: center;
+    margin: 0.5rem 0;
 }
 
 .social-icon:hover {
@@ -617,28 +619,28 @@ nav ul li a:hover {
 }
 
 @keyframes move1 {
-    0%, 100% { transform: translate(50px, 50px); }
+    0%, 100%{ transform: translate(50px, 50px); }
     25% { transform: translate(-50px, 50px); }
     50% { transform: translate(-50px, -50px); }
     75% { transform: translate(50px, -50px); }
 }
 
 @keyframes move2 {
-    0%, 100% { transform: translate(-50px, 50px); }
+    0%, 100%{ transform: translate(-50px, 50px); }
     25% { transform: translate(-50px, -50px); }
     50% { transform: translate(50px, -50px); }
     75% { transform: translate(50px, 50px); }
 }
 
 @keyframes move3 {
-    0%, 100% { transform: translate(-50px, -50px); }
+    0%, 100%{ transform: translate(-50px, -50px); }
     25% { transform: translate(50px, -50px); }
     50% { transform: translate(50px, 50px); }
     75% { transform: translate(-50px, 50px); }
 }
 
 @keyframes move4 {
-    0%, 100% { transform: translate(50px, -50px); }
+    0%, 100%{ transform: translate(50px, -50px); }
     25% { transform: translate(50px, 50px); }
     50% { transform: translate(-50px, 50px); }
     75% { transform: translate(-50px, -50px); }
@@ -727,13 +729,6 @@ nav ul li a:hover {
     z-index: 1000;
 }
 
-#cursor, #cursor-tail {
-    position: absolute;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
-    transition: transform 0.1s ease;
-}
 
 #cursor {
     width: 7px;

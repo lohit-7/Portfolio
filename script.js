@@ -31,45 +31,9 @@ document.addEventListener('DOMContentLoaded', function() {
         indicator.style.background = `conic-gradient(#ff00ff ${percent}%, #333 0)`;
     });
 
-    // Project management
-    const addProjectBtn = document.getElementById('add-project');
-    const projectsContainer = document.querySelector('.projects-grid');
-    let projectCount = 0;
-
-    if (addProjectBtn && projectsContainer) {
-        addProjectBtn.addEventListener('click', function() {
-            const projectName = prompt('Enter project name:');
-            if (projectName) {
-                projectCount++;
-                const projectElement = document.createElement('div');
-                projectElement.classList.add('project');
-                projectElement.innerHTML = `
-                    <div class="project-image"></div>
-                    <h3>${projectName}</h3>
-                    <p>Project ${projectCount} details go here.</p>
-                    <button class="delete-project">Delete</button>
-                `;
-                projectsContainer.appendChild(projectElement);
-
-                // Add delete functionality to the new project
-                const deleteBtn = projectElement.querySelector('.delete-project');
-                deleteBtn.addEventListener('click', function() {
-                    projectsContainer.removeChild(projectElement);
-                });
-            }
-        });
-    }
 
     // Form submission
-    const contactForm = document.querySelector('#contact form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Here you would typically send the form data to a server
-            alert('Thank you for your message! We will get back to you soon.');
-            this.reset();
-        });
-    }
+  
 
     // Social media links
     const socialLinks = document.querySelectorAll('.social-icons a');
@@ -147,28 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
          });
      });
 
-     $(document).ready(function() {
-        const cursor = $('#cursor');
-        const cursorTail = $('#cursor-tail');
-        let tailLength = 20; // Length of the tail
-        
-        $(document).on('mousemove', function(e) {
-            const x = e.pageX;
-            const y = e.pageY;
     
-            cursor.css({
-                left: x - cursor.width() / 2,
-                top: y - cursor.height() / 2
-            });
-    
-            cursorTail.css({
-                left: x - cursorTail.width() / 2,
-                top: y + cursor.height() / 2,
-                transform: `rotate(${Math.atan2(e.pageY - (cursorTail.offset().top - window.scrollY), e.pageX - (cursorTail.offset().left - window.scrollX))}rad)`,
-                width: `${tailLength}px`
-            });
-        });
-     });
 
      document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent the form from submitting normally
