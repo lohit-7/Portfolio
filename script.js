@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("contact-form").addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent default form submission
         
-        emailjs.sendForm("Lohit_7684", "template_07g6d5c", this)
+        emailjs.sendForm("naiklohit743@gmail.com", "template_07g6d5c", this)
             .then(function(response) {
                 document.getElementById("notification").style.display = "block";
                 setTimeout(function() {
